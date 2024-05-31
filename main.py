@@ -2,13 +2,29 @@ from datetime import datetime
 from modules.projet import Projet
 from modules.equipe import Equipe
 from modules.membre import Membre
-from modules.tache import Tache 
+from modules.tache import Tache
 from modules.jalon import Jalon
 from modules.risque import Risque
 from modules.strategy.email_notification_strategy import EmailNotificationStrategy
 from modules.strategy.sms_notification_strategy import SMSNotificationStrategy
 from modules.strategy.push_notification_strategy import PushNotificationStrategy
-if __name__ == '__main__': 
+
+if __name__ == '__main__':
+
+    print("""
+        
+    ███████  █████  ██    ██ ████████ ██    ██     ███████  █████  ███    ███  █████       
+    ██      ██   ██  ██  ██     ██    ██    ██     ██      ██   ██ ████  ████ ██   ██         
+    ███████ ███████   ████      ██    ██    ██     ███████ ███████ ██ ████ ██ ███████         
+         ██ ██   ██    ██       ██    ██    ██          ██ ██   ██ ██  ██  ██ ██   ██         
+    ███████ ██   ██    ██       ██     ██████      ███████ ██   ██ ██      ██ ██   ██
+    
+                ██████  ██████   ██████       ██ ███████ ████████
+                ██   ██ ██   ██ ██    ██      ██ ██         ██
+                ██████  ██████  ██    ██      ██ █████      ██
+                ██      ██   ██ ██    ██ ██   ██ ██         ██
+                ██      ██   ██  ██████   █████  ███████    ██  
+    """)
     # Création des membres de l'équipe
     membre1 = Membre("Alice", "Chef de projet")
     membre2 = Membre("Bob", "Développeur")
@@ -21,16 +37,24 @@ if __name__ == '__main__':
     equipe.ajouter_membre(membre3)
 
     # Création du projet
-    projet = Projet("Projet MQPL", "Développement d'une application de gestion de projet", datetime(2024, 6, 1), datetime(2024, 12, 31))
+    projet = Projet("Projet MQPL", "Développement d'une application de "
+                                   "gestion de projet", datetime(2024, 6, 1),
+                    datetime(2024, 12, 31))
     projet.ajouter_membre_equipe(membre1)
     projet.ajouter_membre_equipe(membre2)
     projet.ajouter_membre_equipe(membre3)
     projet.definir_budget(100000.0)
 
     # Création des tâches
-    tache1 = Tache("Analyse des besoins", "Analyser les besoins du client", datetime(2024, 6, 1), datetime(2024, 6, 15), membre3, "En cours")
-    tache2 = Tache("Développement", "Développer les fonctionnalités principales", datetime(2024, 6, 16), datetime(2024, 9, 30), membre2, "En attente")
-    tache3 = Tache("Tests", "Réaliser les tests unitaires et d'intégration", datetime(2024, 10, 1), datetime(2024, 11, 30), membre2, "En attente")
+    tache1 = Tache("Analyse des besoins", "Analyser les besoins du client",
+                   datetime(2024, 6, 1), datetime(2024, 6, 15),
+                   membre3, "En cours")
+    tache2 = Tache("Développement", "Développer les fonctionnalités principales",
+                   datetime(2024, 6, 16), datetime(2024, 9, 30),
+                   membre2, "En attente")
+    tache3 = Tache("Tests", "Réaliser les tests unitaires et d'intégration",
+                   datetime(2024, 10, 1), datetime(2024, 11, 30),
+                   membre2, "En attente")
 
     projet.ajouter_tache(tache1)
     projet.ajouter_tache(tache2)

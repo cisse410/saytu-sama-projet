@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ec8a6c4-1f0c-42eb-9001-6bc0e5a6c289" name="Changes" comment="" />
+    <list default="true" id="1ec8a6c4-1f0c-42eb-9001-6bc0e5a6c289" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/modules/membre.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/membre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/projet.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/projet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/strategy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/strategy/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/strategy/email_notification_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/strategy/email_notification_strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/strategy/notification_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/strategy/notification_context.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/strategy/notification_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/strategy/notification_strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/strategy/push_notification_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/strategy/push_notification_strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/strategy/sms_notification_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/strategy/sms_notification_strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/tache.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/tache.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hEKuhnYegYHaRadtKdRxQ5iZIe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -21,9 +34,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.email_notification_strategy.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.notification_context.executor": "Run",
+    "Python.notification_strategy.executor": "Run",
+    "Python.projet.executor": "Run",
+    "Python.push_notification_strategy.executor": "Run",
+    "Python.sms_notification_strategy.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/vPro/Desktop/licence3/semestre6/mesure_qualite/ssp"
   }
 }]]></component>
   <component name="RunManager">
@@ -67,16 +88,5 @@
       <updated>1717154020833</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,8 @@
+from datetime import datetime
+
+
 class Changement:
-    def _init_(self, description: str, version: int, date: datetime):
+    def __init__(self, description: str, version: int, date: datetime):
         self.description = description
         self.version = version
         self.date = date

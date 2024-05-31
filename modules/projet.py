@@ -1,13 +1,15 @@
+from datetime import datetime
+
+from modules.strategy.notification_context import NotificationContext
 from modules.strategy.notification_strategy import NotificationStrategy
-from modules.strategy.email_notification_strategy import EmailNotificationStrategy
-from modules.strategy.sms_notification_strategy import SMSNotificationStrategy
-from modules.strategy.push_notification_strategy import PushNotificationStrategy
 from modules.equipe import Equipe
 from modules.membre import Membre
 from modules.tache import Tache
 from modules.jalon import Jalon
 from modules.risque import Risque
 from modules.changement import Changement
+
+
 class Projet:
     def __init__(self, nom: str, description: str, date_debut: datetime, date_fin: datetime):
         self.nom = nom
@@ -25,7 +27,7 @@ class Projet:
         self.notification_context = None
 
     def set_notification_strategy(self, strategy: NotificationStrategy) -> None:
-        self.notification_context = notification_context.NotificationContext(strategy)
+        self.notification_context = NotificationContext(strategy)
 
     def ajouter_tache(self, tache: Tache) -> None:
         self.taches.append(tache)
@@ -55,6 +57,6 @@ class Projet:
         # Méthode fictive pour calculer le chemin critique
         pass
 
-    def notifier(self, message: str, destinataires: List[Membre]) -> None:
+    def notifier(self, message: str, destinataires: list[Membre]) -> None:
         if self.notification_context:
             self.notification_context.notifier(message, destinataires)

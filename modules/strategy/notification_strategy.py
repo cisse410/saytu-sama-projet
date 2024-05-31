@@ -1,5 +1,8 @@
-from ..membre import Membre 
+from abc import ABC, abstractmethod
+from modules.membre import Membre
 
-class NotificationStrategy:
+
+class NotificationStrategy(ABC):
+    @staticmethod
     def envoyer(self, message: str, destinataire: Membre) -> None:
         raise NotImplementedError
