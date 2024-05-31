@@ -1,10 +1,10 @@
-from ..modules import membre
+from modules.membre import Membre
 class Equipe:
     def _init_(self):
         self.membres = []
 
-    def ajouter_membre(self, membre: membre.Membre) -> None:
+    def ajouter_membre(self, membre: Membre) -> None:
         self.membres.append(membre)
 
-    def obtenir_membres(self) -> List[membre.Membre]:
+    def obtenir_membres(self) -> list[Membre]:
         return self.membres

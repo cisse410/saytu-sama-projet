@@ -1,10 +1,13 @@
-from ..strategy import notification_strategy
-from ..strategy import notification_context
-from tache import Tache
-from membre import Membre
-from jalon import Jalon
-from risque import Risque
-from equipe import Equipe
+from modules.strategy.notification_strategy import NotificationStrategy
+from modules.strategy.email_notification_strategy import EmailNotificationStrategy
+from modules.strategy.sms_notification_strategy import SMSNotificationStrategy
+from modules.strategy.push_notification_strategy import PushNotificationStrategy
+from modules.equipe import Equipe
+from modules.membre import Membre
+from modules.tache import Tache
+from modules.jalon import Jalon
+from modules.risque import Risque
+from modules.changement import Changement
 class Projet:
     def __init__(self, nom: str, description: str, date_debut: datetime, date_fin: datetime):
         self.nom = nom
@@ -21,7 +24,7 @@ class Projet:
         self.chemin_critique = []
         self.notification_context = None
 
-    def set_notification_strategy(self, strategy: notification_strategy.NotificationStrategy) -> None:
+    def set_notification_strategy(self, strategy: NotificationStrategy) -> None:
         self.notification_context = notification_context.NotificationContext(strategy)
 
     def ajouter_tache(self, tache: Tache) -> None:
