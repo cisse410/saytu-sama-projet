@@ -1,4 +1,3 @@
-from modules.membre import Membre
 
 
 class Equipe:
@@ -7,6 +6,7 @@ class Equipe:
 
     def ajouter_membre(self, membre):
         self.membres.append(membre)
+        print(f"Email envoyé à {membre.nom}: {membre.nom} à été ajoute à l'équipe")
 
     def obtenir_membres(self):
         return self.membres

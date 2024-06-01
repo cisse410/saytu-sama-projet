@@ -31,32 +31,46 @@ class Projet:
 
     def ajouter_tache(self, tache: Tache) -> None:
         self.taches.append(tache)
+        for membre in self.equipe.membres:
+            print(f"Email envoyé à {membre.nom} : Nouvelle tâche:  {tache.nom}")
+        print("######")
 
     def ajouter_membre_equipe(self, membre: Membre) -> None:
         self.equipe.ajouter_membre(membre)
 
     def definir_budget(self, budget: float) -> None:
         self.budget = budget
+        for membre in self.equipe.membres:
+            print(f"Email envoyé à {membre.nom} : Le budget du projet a été défini à :  {self.budget} FCFA")
+        print("######")
 
     def ajouter_risque(self, risque: Risque) -> None:
         self.risques.append(risque)
+        for membre in self.equipe.membres:
+            print(f"Email envoyé à {membre.nom} : Nouveau risque ajouté:  {risque.description}")
+        print("######")
 
     def ajouter_jalon(self, jalon: Jalon) -> None:
         self.jalons.append(jalon)
+        for membre in self.equipe.membres:
+            print(f"Email envoyé à {membre.nom} : Nouveau jalon ajouté:  {jalon.nom}")
+        print("######")
 
     def enregistrer_changement(self, description: str) -> None:
         changement = Changement(description, self.version, datetime.now())
         self.changements.append(changement)
         self.version += 1
+        for membre in self.equipe.membres:
+            print(f"Email envoyé à {membre.nom} : Changement enregistré: Changement de la portée du projet: "
+                  f"(version {self.version})")
+        print("######")
 
-    from datetime import datetime
-
-    def generer_rapport_performance(self) -> str: 
+    def generer_rapport_performance(self) -> str:
         # Construction du header du rapport
         rapport = f"""\t\t#########################################################################\n
         ############# Rapport de Performance du Projet {self.nom} ##############\n
         #########################################################################\n\n"""
-                     
+
         rapport += f"Date de génération : {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
 
         # Section sur le progrès des tâches
@@ -69,7 +83,8 @@ class Projet:
         for tache in self.taches:
             # Assuming you want to check if the task is overdue, i.e., its end date is earlier than its start date
             if tache.date_fin < tache.date_debut:
-                rapport += f"- {tache.nom} est en retard car sa date de fin ({tache.date_fin}) est antérieure à sa date de début ({tache.date_debut}).\n"
+                rapport += (f"- {tache.nom} est en retard car sa date de fin ({tache.date_fin})"
+                            f"est antérieure à sa date de début ({tache.date_debut}).\n")
 
         # Section on Resource Usage
         rapport += "\n## Utilisation des Ressources:\n"
@@ -80,12 +95,10 @@ class Projet:
         rapport += "\n## Risques Identifiés:\n"
         for risque in self.risques:
             rapport += f"- {risque.description}\n"
- 
+
         return rapport
 
-
-    
-    def calculer_chemin_critique(self): 
+    def calculer_chemin_critique(self):
         self.chemin_critique = [tache for tache in self.taches if tache.statut == "En cours"]
 
     def notifier(self, message: str, destinataires: list[Membre]) -> None:

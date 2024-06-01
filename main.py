@@ -9,6 +9,7 @@ from modules.strategy.email_notification_strategy import EmailNotificationStrate
 from modules.strategy.sms_notification_strategy import SMSNotificationStrategy
 from modules.strategy.push_notification_strategy import PushNotificationStrategy
 
+
 class RapportActivite:
     @staticmethod
     def generer(projet):
@@ -32,14 +33,12 @@ class RapportActivite:
             rapport += f"- {risque.description} (Probabilité: {risque.probabilite}, Impact: {risque.impact})\n"
         rapport += "Chemin Critique:\n"
         for tache in projet.chemin_critique:
-            rapport += f"- {tache.nom} ({tache.date_debut.strftime('%Y-%m-%d')} à {tache.date_fin.strftime('%Y-%m-%d')})\n" 
-        projet.generer_rapport_performance() 
+            rapport += f"- {tache.nom} ({tache.date_debut.strftime('%Y-%m-%d')} à {tache.date_fin.strftime('%Y-%m-%d')})\n"
+        projet.generer_rapport_performance()
         return rapport
 
- 
 
 if __name__ == '__main__':
-
     print("""
         
     ███████  █████  ██    ██ ████████ ██    ██     ███████  █████  ███    ███  █████       
@@ -54,22 +53,21 @@ if __name__ == '__main__':
                 ██      ██   ██ ██    ██ ██   ██ ██         ██
                 ██      ██   ██  ██████   █████  ███████    ██  
     """)
-    
+
     print(f"""\t\t#########################################################################\n
         ################# Envoie des notifications aux membres ##################\n
         #########################################################################\n""")
     # Création des membres de l'équipe
-    
-    
+
     membre1 = Membre("Fatou", "Chef de projet")
     membre2 = Membre("Moussa", "Développeur")
     membre3 = Membre("Awa", "Analyste")
 
     # Création de l'équipe et ajout des membres
     equipe = Equipe()
-    equipe.ajouter_membre(membre1)
-    equipe.ajouter_membre(membre2)
-    equipe.ajouter_membre(membre3)
+    # equipe.ajouter_membre(membre1)
+    # equipe.ajouter_membre(membre2)
+    # equipe.ajouter_membre(membre3)
 
     # Création du projet
     projet = Projet("Projet MQPL", "Développement d'une application de "
@@ -78,7 +76,7 @@ if __name__ == '__main__':
     projet.ajouter_membre_equipe(membre1)
     projet.ajouter_membre_equipe(membre2)
     projet.ajouter_membre_equipe(membre3)
-    projet.definir_budget(100000.0)
+    print("######")
 
     # Création des tâches
     tache1 = Tache("Analyse des besoins", "Analyser les besoins du client",
@@ -105,6 +103,7 @@ if __name__ == '__main__':
 
     projet.ajouter_jalon(jalon1)
     projet.ajouter_jalon(jalon2)
+    projet.definir_budget(100000.0)
 
     # Ajout de risques
     risque1 = Risque("Retard de livraison", 0.3, "Moyen")
@@ -115,32 +114,31 @@ if __name__ == '__main__':
 
     # Enregistrement de changement
     projet.enregistrer_changement("Modification des spécifications fonctionnelles")
-
+    # print(f"Le responsable de la tache \"{tache1.nom}\" est {tache1.responsable.nom}")
     # Notification par email
-    projet.set_notification_strategy(EmailNotificationStrategy())
-    projet.notifier("La tâche 'Analyse des besoins' est en cours.", projet.equipe.obtenir_membres())
+    # projet.set_notification_strategy(EmailNotificationStrategy())
+    # projet.notifier(f"Email envoyé à {membre1.nom}", projet.equipe.obtenir_membres())
+    # projet.notifier(f"Email envoyé à {tache1.responsable.nom}: Nouvelle tâche ajoutee : {tache1.nom}",
+    #                 projet.equipe.obtenir_membres())
+    # projet.notifier("La tâche 'Analyse des besoins' est en cours.", projet.equipe.obtenir_membres())
 
     # Notification par SMS
-    projet.set_notification_strategy(SMSNotificationStrategy())
-    projet.notifier("La tâche 'Développement' est en attente.", projet.equipe.obtenir_membres())
+    # projet.set_notification_strategy(SMSNotificationStrategy())
+    # projet.notifier("La tâche 'Développement' est en attente.", projet.equipe.obtenir_membres())
 
     # Notification par Push
-    projet.set_notification_strategy(PushNotificationStrategy())
-    projet.notifier("La tâche 'Tests' est en attente.", projet.equipe.obtenir_membres())
- 
+    # projet.set_notification_strategy(PushNotificationStrategy())
+    # projet.notifier("La tâche 'Tests' est en attente.", projet.equipe.obtenir_membres())
 
     # Calcul du chemin critique (fictif)
     projet.calculer_chemin_critique()
- 
-    
+
     print(f"""\n\t\t#########################################################################\n
         #################### Rapport du Projet {projet.nom} ######################\n
         #########################################################################\n""")
     rapport = RapportActivite.generer(projet)
     print(rapport)
-    
-    
-    
+
     rapport_performance = projet.generer_rapport_performance()
-    
+
     print(rapport_performance)
