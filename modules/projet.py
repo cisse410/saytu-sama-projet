@@ -49,13 +49,44 @@ class Projet:
         self.changements.append(changement)
         self.version += 1
 
-    def generer_rapport_performance(self) -> str:
-        # Méthode fictive pour générer un rapport
-        return "Rapport de performance"
+    from datetime import datetime
 
-    def calculer_chemin_critique(self) -> None:
-        # Méthode fictive pour calculer le chemin critique
-        pass
+    def generer_rapport_performance(self) -> str: 
+        # Construction du header du rapport
+        rapport = f"""\t\t#########################################################################\n
+        ############# Rapport de Performance du Projet {self.nom} ##############\n
+        #########################################################################\n\n"""
+                     
+        rapport += f"Date de génération : {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
+
+        # Section sur le progrès des tâches
+        rapport += "## Progrès des Tâches:\n"
+        for tache in self.taches:
+            rapport += f"- {tache.nom}: {tache.statut}, Durée restante: {tache.date_fin - tache.date_debut}\n"
+
+        # Adjusted Section on Delays Compared to the Plan
+        rapport += "\n## Retards par rapport au Planning:\n"
+        for tache in self.taches:
+            # Assuming you want to check if the task is overdue, i.e., its end date is earlier than its start date
+            if tache.date_fin < tache.date_debut:
+                rapport += f"- {tache.nom} est en retard car sa date de fin ({tache.date_fin}) est antérieure à sa date de début ({tache.date_debut}).\n"
+
+        # Section on Resource Usage
+        rapport += "\n## Utilisation des Ressources:\n"
+        rapport += f"- Budget utilisé: {self.budget}\n"
+        rapport += f"- Nombre de membres de l'équipe: {len(self.equipe.membres)}\n"
+
+        # Section on Identified Risks
+        rapport += "\n## Risques Identifiés:\n"
+        for risque in self.risques:
+            rapport += f"- {risque.description}\n"
+ 
+        return rapport
+
+
+    
+    def calculer_chemin_critique(self): 
+        self.chemin_critique = [tache for tache in self.taches if tache.statut == "En cours"]
 
     def notifier(self, message: str, destinataires: list[Membre]) -> None:
         if self.notification_context:
