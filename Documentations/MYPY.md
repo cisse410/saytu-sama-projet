@@ -1,5 +1,15 @@
+<h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
+    Avant Capture
+</h2> 
 <p align="center">
-    <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="" />
+    <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/mypy-before.png" />
+</p>
+
+<h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
+   Aprés Capture
+</h2> 
+<p align="center">
+    <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/mypy-after.png" />
 </p>
 <a align="center" href="https://mypy-lang.org/">
     <h1 style="color: blue;font-family: arial;  >

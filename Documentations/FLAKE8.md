@@ -1,12 +1,12 @@
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-    Avant Capture
+   Capture d'écran de la sortie du commande FLAKE8 avant la résolution:
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/flake8 before capture.jpeg" />
 </p>
 
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-   Aprés Capture
+   Capture d'écran de la sortie du commande FLAKE8 apres la résolution :
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center"  src="./Captures images des  commandes/flake8 after capture.jpeg" />
@@ -46,18 +46,7 @@ L'analyse réalisée par flake8 nous a permis d'identifier précisément les poi
         Cela a été fait en brisant les longues chaînes de caractères et en divisant les longues instructions en plusieurs lignes logiques.
         
 
-Suppression des Importations Inutilisées :
-
-    Nous avons supprimé les importations qui n'étaient pas utilisées dans le code pour réduire le désordre et améliorer la clarté.
-    Exemple de correction :
-
-    python
-
-        # Avant
-        # (Importation supprimée car non utilisée)
-
-        # Après
-        from modules.strategy.notification_strategy import NotificationStrategy
+ 
 
 Impact sur la Qualité du Code
 
