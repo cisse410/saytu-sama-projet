@@ -1,6 +1,7 @@
 """
 class TestChangement
 """
+
 import unittest
 from datetime import datetime
 from modules.changement import Changement
@@ -8,9 +9,10 @@ from modules.changement import Changement
 
 class TestChangement(unittest.TestCase):
     """
-        Cette classe permet de tester l'ensemble des methodes de la classe
-         TestChangement
+    Cette classe permet de tester l'ensemble des methodes de la classe
+     TestChangement
     """
+
     def setUp(self):
         self.description = "Migration"
         self.version = 1

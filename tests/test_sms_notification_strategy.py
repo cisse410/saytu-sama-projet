@@ -1,6 +1,7 @@
 """
 class TestSMSNotificationStrategyMethods
 """
+
 import unittest
 from modules.membre import Membre
 from modules.strategy.sms_notification_strategy import SMSNotificationStrategy
@@ -11,6 +12,7 @@ class TestSMSNotificationStrategyMethods(unittest.TestCase):
     Cette classe permet de tester toutes les methodes definies
     definie dans la classe SMSNotificationStrategy
     """
+
     def setUp(self):
         self.sms_strategy = SMSNotificationStrategy()
 

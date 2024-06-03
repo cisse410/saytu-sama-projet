@@ -1,6 +1,7 @@
 """
 class TestJalon
 """
+
 import unittest
 from datetime import datetime
 from modules.jalon import Jalon
@@ -11,6 +12,7 @@ class TestJalon(unittest.TestCase):
     Cette classe permet de tester toutes les methodes definies
     definie dans la classe Jalon
     """
+
     def setUp(self):
         self.nom = "Jalonnnnn"
         self.date = datetime(2024, 6, 3)
