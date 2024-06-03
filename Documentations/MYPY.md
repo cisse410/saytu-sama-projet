@@ -21,8 +21,7 @@
     Analyse de la sortie du commande:
 </h2> 
 
-<p style="" align="left">
-Je m'excuse pour la confusion précédente. Voici une analyse correcte basée sur les sorties fournies :
+<p style="" align="left"> 
 
 Analyse de la Sortie de la Commande `mypy`
 
