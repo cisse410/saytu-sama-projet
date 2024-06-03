@@ -42,7 +42,7 @@ class Projet:
         self.version = 1
         self.changements: list[Changement] = []
         self.chemin_critique: list[Tache] = []
-        self.notification_context: NotificationContext
+        self.notification_context: NotificationContext = None 
 
     def set_notification_strategy(self, strategy: NotificationStrategy):
         """
