@@ -1,6 +1,7 @@
 """
 class TestRisqueMethod
 """
+
 import unittest
 
 from modules.risque import Risque
@@ -11,6 +12,7 @@ class TestRisqueMethod(unittest.TestCase):
     Cette classe permet de tester l'ensemble des methodes de classe Risque
     Dans cette etape du projet, on a que le constructeur a tester
     """
+
     def setUp(self):
         """
         Methode appelee pour preparer le test

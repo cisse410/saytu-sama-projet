@@ -1,6 +1,7 @@
 """
 class TestEquipeMethods
 """
+
 import unittest
 from modules.equipe import Equipe
 from modules.membre import Membre
@@ -8,9 +9,10 @@ from modules.membre import Membre
 
 class TestEquipeMethods(unittest.TestCase):
     """
-        Cette classe permet de tester l'ensemble des methodes de classe Risque
-        Dans cette etape du projet, on a que le constructeur a tester
+    Cette classe permet de tester l'ensemble des methodes de classe Risque
+    Dans cette etape du projet, on a que le constructeur a tester
     """
+
     def setUp(self):
         # Créez une équipe de test vide
         self.equipe_test = Equipe()

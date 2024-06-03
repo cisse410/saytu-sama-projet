@@ -1,14 +1,20 @@
+"""
+class Projet
+"""
 import unittest
 from datetime import datetime
-from modules.equipe import Equipe
 from modules.membre import Membre
 from modules.tache import Tache
 from modules.jalon import Jalon
 from modules.risque import Risque
-from modules.changement import Changement
 from modules.projet import Projet
 
+
 class TestProjet(unittest.TestCase):
+    """
+    Cette classe permet de tester toutes les methodes definies
+    definie dans la classe Projet
+    """
 
     def setUp(self):
         """
@@ -18,14 +24,21 @@ class TestProjet(unittest.TestCase):
             nom="Projet MQPL",
             description="Gestion des projets",
             date_debut=datetime(2024, 5, 29),
-            date_fin=datetime(2024, 6, 5)
+            date_fin=datetime(2024, 6, 5),
         )
 
     def test_ajouter_tache(self):
         """
         Test de l'ajout d'une tâche
         """
-        tache = Tache("Analyse des besoins","Analyser les besoins du client",datetime(2023, 1, 1), datetime(2023, 2, 1), Membre('Adama Gaye','Testeur'),"En cours")
+        tache = Tache(
+            "Analyse des besoins",
+            "Analyser les besoins du client",
+            datetime(2023, 1, 1),
+            datetime(2023, 2, 1),
+            Membre("Adama Gaye", "Testeur"),
+            "En cours",
+        )
         self.projet.ajouter_tache(tache)
         self.assertIn(tache, self.projet.taches)
 
@@ -33,7 +46,7 @@ class TestProjet(unittest.TestCase):
         """
         Test de l'ajout d'un membre à l'équipe
         """
-        membre = Membre("Moussa KANDE","Dev backend")
+        membre = Membre("Moussa KANDE", "Dev backend")
         self.projet.ajouter_membre_equipe(membre)
         self.assertIn(membre, self.projet.equipe.membres)
 
@@ -49,7 +62,7 @@ class TestProjet(unittest.TestCase):
         """
         Test de l'ajout d'un risque
         """
-        risque = Risque("Retard de livraison",0.3,"Moyen")
+        risque = Risque("Retard de livraison", 0.3, "Moyen")
         self.projet.ajouter_risque(risque)
         self.assertIn(risque, self.projet.risques)
 
@@ -57,7 +70,7 @@ class TestProjet(unittest.TestCase):
         """
         Test de l'ajout d'un jalon
         """
-        jalon = Jalon("Fin de l'analyse des besoins",datetime(2024, 6, 12))
+        jalon = Jalon("Fin de l'analyse des besoins", datetime(2024, 6, 12))
         self.projet.ajouter_jalon(jalon)
         self.assertIn(jalon, self.projet.jalons)
 
@@ -81,26 +94,43 @@ class TestProjet(unittest.TestCase):
         """
         Test du calcul du chemin critique
         """
-        tache1 = Tache("Analyse des besoins","Analyser les besoins du client",datetime(2023, 1, 1), datetime(2023, 2, 1), Membre('Adama Gaye','Testeur'),"En cours")
-        tache2 = Tache("Développement","Développer les fonctionnalités principales",datetime(2023, 3, 1), datetime(2023, 4, 1), Membre('Moustapha Ka','Dev backend'),"Terminée")
+        tache1 = Tache(
+            "Analyse des besoins",
+            "Analyser les besoins du client",
+            datetime(2023, 1, 1),
+            datetime(2023, 2, 1),
+            Membre("Adama Gaye", "Testeur"),
+            "En cours",
+        )
+        tache2 = Tache(
+            "Développement",
+            "Développer les fonctionnalités principales",
+            datetime(2023, 3, 1),
+            datetime(2023, 4, 1),
+            Membre("Moustapha Ka", "Dev backend"),
+            "Terminée",
+        )
         self.projet.ajouter_tache(tache1)
         self.projet.ajouter_tache(tache2)
         self.projet.calculer_chemin_critique()
-        self.assertIn(tache1, self.projet.chemin_critique) 
-        self.assertIn(tache2, self.projet.chemin_critique) 
-        
-        
+        self.assertIn(tache1, self.projet.chemin_critique)
+        self.assertIn(tache2, self.projet.chemin_critique)
+
     def test_notifier(self):
         """
         Test de la notification
         """
-        membre1 = Membre("Adama Gaye","Testeur")
-        membre2 = Membre("Moustapha ka","Designer")
+        membre1 = Membre("Adama Gaye", "Testeur")
+        membre2 = Membre("Moustapha ka", "Designer")
         self.projet.ajouter_membre_equipe(membre1)
         self.projet.ajouter_membre_equipe(membre2)
         message = "Message de test"
-        destinataires = [membre1, membre2] 
-        self.projet.notifier(message, destinataires, )
+        destinataires = [membre1, membre2]
+        self.projet.notifier(
+            message,
+            destinataires,
+        )
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
