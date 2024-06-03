@@ -1,25 +1,25 @@
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-    Avant Capture (1)
+    ETAT INITIAL (1)
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/pylint-before-1.png" />
 </p>
 
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-    Avant Capture (2)
+    ETAT INITIAL (2)
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/pylint-before-2.png" />
 </p>
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-    Avant Capture main.py
+    ETAT INITIAL => main.py
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/pylint-main-before.png" />
 </p>
 
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-   Aprés Capture
+   ETAT FINAL
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/pylint-main-after.png" />
