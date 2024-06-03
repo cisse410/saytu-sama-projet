@@ -19,11 +19,11 @@ Notre solution porte le nom de <b>"Saytu Sama Projet"</b>, une solution qui se v
 
 Notre projet est organisé de la manière suivante :
 
-Le dossier principal se compose de 3 sous-dossiers (```Documentation```, ```Modules``` et ```Tests```).
+Le dossier principal se compose de 3 sous-dossiers (```Documentations```, ```modules``` et ```tests```).
 
 -Dans le dossier nommé ```Documentations```, nous avons le sous-dossier ```Captures images des  commandes``` où nous avons placé les captures d'écran des sorties des commandes, suivies des fichiers Markdown avec leurs analyses.
 
--Dans le dossier nommé ```modules```, nous trouvons les classes principales ainsi que le sous-dossier ```strategy```, contenant les fichiers liés au ```design pattern Strategy```
+-Dans le dossier nommé ```modules```, nous avons les classes principales ainsi que le sous-dossier ```strategy```, contenant les fichiers liés au ```design pattern Strategy```
 
 -Dans le dossier appelé ```tests```, nous avons simplement les classes de test qui testent toutes les méthodes de notre code à l'aide de la bibliothèque ```unittest```
  
