@@ -19,7 +19,7 @@ Notre solution porte le nom de <b>"Saytu Sama Projet"</b>, une solution qui se v
 
 Notre projet est organisé de la manière suivante :
 
--Le dossier principal se compose de 3 sous-dossiers (Documentation, Modules et Tests).
+Le dossier principal se compose de 3 sous-dossiers (```Documentation```, ```Modules``` et ```Tests```).
 
 -Dans le dossier nommé ```Documentations```, nous avons le sous-dossier ```Captures images des  commandes``` où nous avons placé les captures d'écran des sorties des commandes, suivies des fichiers Markdown avec leurs analyses.
 
