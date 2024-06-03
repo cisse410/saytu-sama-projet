@@ -1,12 +1,12 @@
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-    Avant Capture
+   ETAT INITIAL : 
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/mypy-before.png" />
 </p>
 
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-   Aprés Capture
+   ETAT FINAL : 
 </h2> 
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/mypy-after.png" />

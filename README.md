@@ -14,6 +14,19 @@
 <p>Dans l'optique de mettre en pratique nos connaissances en mesure qualité et performance logicielle, on est amené à mettre en place un système de gestion de projet en utilisant Python.</p>
 Notre solution porte le nom de <b>"Saytu Sama Projet"</b>, une solution qui se veut performante autant que possible avec un code de qualité non discutable 😂 avec les bonnes pratiques de codage qui facilitera sans doute la maintenance du projet.
 
+## Structure du projet</b>
+![struct](https://github.com/cisse410/saytu-sama-projet/assets/80828135/e60570e5-2518-43dd-8428-5b7ab3368ad1)
+
+Notre projet est organisé de la manière suivante :
+
+Le dossier principal se compose de 3 sous-dossiers (```Documentations```, ```modules``` et ```tests```).
+
+-Dans le dossier nommé ```Documentations```, nous avons le sous-dossier ```Captures images des  commandes``` où nous avons placé les captures d'écran des sorties des commandes, suivies des fichiers Markdown avec leurs analyses.
+
+-Dans le dossier nommé ```modules```, nous avons les classes principales ainsi que le sous-dossier ```strategy```, contenant les fichiers liés au ```design pattern Strategy```
+
+-Dans le dossier appelé ```tests```, nous avons simplement les classes de test qui testent toutes les méthodes de notre code à l'aide de la bibliothèque ```unittest```
+ 
 ## Fonctionnalités offertes par <b>Saytu Sama Projet</b>
 
 - Ajouter des tâches, des membres d'équipe, des risques, des jalons et enregistrer des changements

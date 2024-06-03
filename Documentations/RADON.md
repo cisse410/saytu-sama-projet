@@ -1,5 +1,5 @@
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-   Capture de la sortie du commande RADON:
+  Capture d'écran de la sortie du commande RADON :
 </h2>
 <p align="center">
     <img style="width: 100%; background-position:center; background-size: cover; background-repeat: no-repeat;" align="center" src="./Captures images des  commandes/radon-main.png" />

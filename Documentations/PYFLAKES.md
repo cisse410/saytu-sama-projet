@@ -1,5 +1,5 @@
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
-    Avant Capture (1)
+     Capture d'écran de la sortie du commande PYFLAKE :
 </h2> 
 <p
  align="center">
