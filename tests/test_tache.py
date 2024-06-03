@@ -1,6 +1,7 @@
 """
 class TestTacheMethods
 """
+
 import unittest
 from datetime import datetime
 from modules.membre import Membre
@@ -11,6 +12,7 @@ class TestTacheMethods(unittest.TestCase):
     """
     Cette classe permet de tester toutes les methodes de la classe tache
     """
+
     def setUp(self):
         """
 
@@ -21,7 +23,7 @@ class TestTacheMethods(unittest.TestCase):
         self.tache_test = Tache(
             nom="Authentification",
             description="Mettre en place un systeme d'authentification pour permettre"
-                        "aux utilisateurs de se connecter",
+            "aux utilisateurs de se connecter",
             date_debut=datetime(2024, 6, 1),
             date_fin=datetime(2024, 6, 10),
             responsable=self.responsable,
