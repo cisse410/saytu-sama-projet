@@ -23,9 +23,9 @@
 
 <p style="" align="left"> 
 
-Analyse de la Sortie de la Commande `mypy`
+## Analyse de la Sortie de la Commande `mypy`
 
-Analyse Initiale du Code
+**Analyse Initiale du Code**
 
 Nous avons exécuté la commande `mypy` sur notre projet pour vérifier la conformité des types dans le code. Voici les résultats obtenus et les actions correctives entreprises.
 
@@ -34,7 +34,7 @@ Nous avons exécuté la commande `mypy` sur notre projet pour vérifier la confo
 
 Après avoir apporté des modifications au code, une nouvelle exécution de `mypy` sur `main.py` a révélé plusieurs erreurs :
 
-Erreurs de typage détectées :
+**Erreurs de typage détectées :**
    ```plaintext
    (.venv) PS C:\Users\vPro\Desktop\licence3\semestre6\mesure_qualite\ssp> mypy .\main.py
    modules/tache.py:40: error: Need type annotation for "dependances" (hint: "dependances: list[<type>] = ...")  [var-annotated]
@@ -47,46 +47,41 @@ Erreurs de typage détectées :
    Found 7 errors in 2 files (checked 1 source file)
    ```
 
-Problèmes Identifiés :
+**Problèmes Identifiés :**
 
-Annotations de type manquantes :
+1- Annotations de type manquantes :
    - Plusieurs variables nécessitent des annotations de type explicites. Par exemple :
      ```plaintext
      modules/tache.py:40: error: Need type annotation for "dependances"
      modules/projet.py:37: error: Need type annotation for "taches"
      ```
 
-Types incompatibles dans les affectations :
+2- Types incompatibles dans les affectations :
    - Une affectation de type incompatible a été détectée :
      ```plaintext
      modules/projet.py:53: error: Incompatible types in assignment
      ```
 
-Actions Correctives et Améliorations Apportées
+**Actions Correctives et Améliorations Apportées**
 
-Ajout des annotations de type :
+1- Ajout des annotations de type :
    - Nous avons ajouté les annotations de type pour les variables qui en avaient besoin. Par exemple :
      ```python
-     dependances: list[Type] = []
-     taches: list[Type] = []
-     risques: list[Type] = []
-     jalons: list[Type] = []
-     changements: list[Type] = []
-     chemin_critique: list[Type] = []
+     dependances: list[Tache] = []
+     taches: list[Tache] = []
+     risques: list[Risque] = []
+     jalons: list[Jalon] = []
+     changements: list[Changement] = []
+     chemin_critique: list[Tache] = []
      ```
 
-Correction des affectations de type :
+2- Correction des affectations de type :
    - Nous avons ajusté les affectations pour correspondre aux types attendus. Par exemple :
      ```python
-     context: Optional[NotificationContext] = None
-     if some_condition:
-         context = NotificationContext()
-     ```
-
-
+     notification_context: NotificationContext = None
 **Deuxième Exécution : Après Modification du Code**
 
-Vérification du fichier `main.py` :
+**Vérification du fichier `main.py` :**
    ```plaintext
    (.venv) PS C:\Users\vPro\Desktop\licence3\semestre6\mesure_qualite\ssp> mypy .\main.py
    Success: no issues found in 1 source file
@@ -94,7 +89,7 @@ Vérification du fichier `main.py` :
    Aucune erreur n'a été détectée dans `main.py`, indiquant que ce fichier respecte les annotations de type.
 
 
-Vérification du répertoire `modules` :
+**Vérification du répertoire `modules` :**
    ```plaintext
    (.venv) PS C:\Users\vPro\Desktop\licence3\semestre6\mesure_qualite\ssp> mypy .\modules\
    Success: no issues found in 14 source files
@@ -102,20 +97,20 @@ Vérification du répertoire `modules` :
    Tous les fichiers dans le répertoire `modules` ont été analysés sans qu'aucune erreur de type ne soit détectée, ce qui est un bon indicateur de la qualité du typage dans ce répertoire.
 
 
-Impact sur la Qualité du Code
+## Impact sur la Qualité du Code
 
-Améliorations apportées :
+**Améliorations apportées :**
 
-Lisibilité accrue :
+1- Lisibilité accrue :
    - Les annotations de type rendent le code plus explicite, facilitant ainsi la compréhension du type de chaque variable.
 
-Robustesse du code :
+2- Robustesse du code :
    - En corrigeant les types incompatibles, nous réduisons les risques d'erreurs d'exécution liées aux types incorrects.
 
-Conformité aux standards :
+3- Conformité aux standards :
    - En adhérant aux meilleures pratiques de typage en Python, notre code devient plus aligné avec les standards de la communauté, facilitant ainsi la collaboration et la maintenance future.
 
 **Conclusion :**
 
-L'utilisation de `mypy` comme outil d'analyse statique nous a permis d'identifier et de corriger des problèmes de typage. Ces corrections ont amélioré la qualité du code en termes de lisibilité, de robustesse et de conformité aux standards de typage Python.
+L'utilisation de `mypy` comme outil d'analyse statique nous a permis d'identifier et de corriger des problèmes de typage. Ces corrections ont amélioré la qualité de notre code en termes de lisibilité, de robustesse et de conformité aux standards de typage Python.
 </p>

@@ -15,13 +15,13 @@
 </h2> 
 
 <p style="" align="left">
-Analyse de la sortie du commande
+ Analyse de la sortie du commande
 
-Outil utilisé: Radon
+Outil utilisé: `Radon`
 
-Fichier analysé: main.py
+Fichier analysé: `main.py`
 
-Métriques mesurées:
+** Métriques mesurées: **
 
     h1: Nombre de titres de niveau 1
     h2: Nombre de titres de niveau 2
@@ -31,12 +31,12 @@ Métriques mesurées:
     length: Longueur totale du code (en caractères)
     calculated_length: Longueur du code calculée selon la formule de McCabe
     volume: Volume du code (calculé en multipliant la longueur par le vocabulaire)
-    difficulty: Difficulté du code (calculée selon la formule de McCabe)
+    difficulty: Difficulté du code (calculée selon la formule de McCabe (M = E - N +2P) )
     effort: Effort requis pour comprendre et modifier le code (calculé en multipliant la difficulté par le volume)
     time: Temps nécessaire pour comprendre et modifier le code (calculé en divisant l'effort par 100)
     bugs: Nombre de bugs potentiels dans le code (calculé en divisant le volume par 1700)
 
-Résultats:
+**Résultats:**
 
     h1: 2
     h2: 18
@@ -51,13 +51,13 @@ Résultats:
     time: 20.489140597984534
     bugs: 0.0691508495181978
 
-Interprétation des résultats:
+**Interprétation des résultats:**
 
     Le fichier main.py est relativement court et simple, avec un nombre de lignes de code et un vocabulaire réduits.
     La difficulté et l'effort du code sont également faibles, ce qui indique qu'il est relativement facile à comprendre et à modifier.
     Le nombre de bugs potentiels est également faible, ce qui indique que le code est relativement stable.
 
-Conclusion:
+**Conclusion:**
 
-Dans l'ensemble, la sortie du commande radon indique que le fichier main.py est un code de bonne qualité. Il est court, simple, facile à comprendre et à modifier, et relativement stable.
+Dans l'ensemble, la sortie du commande radon indique que le fichier main.py est un code de bonne qualité.  
 </p>

@@ -1,3 +1,5 @@
+# Documentation de BLACK
+
 <h2 style="text-decoration: underline; ,font-family: arial; color: #D3D3D3;" align="left">
     Capture d'écran de la sortie du commande BLACK :
 </h2> 
@@ -24,11 +26,11 @@ Avant l'utilisation de l'outil de formatage automatique black, notre projet avai
 
 L'exécution de black sur le répertoire .\modules\ a produit les résultats suivants :
 
-    Fichiers Reformatés :
+- Fichiers Reformatés :
         Un fichier a été reformaté automatiquement : modules/strategy/sms_notification_strategy.py.
-        Le reste des fichiers (13) sont restés inchangés car ils respectaient déjà les conventions de style prises en charge par black.
+- Le reste des fichiers (13) sont restés inchangés car ils respectaient déjà les conventions de style prises en charge par black.
 
-Actions Correctives et Améliorations Apportées
+**Actions Correctives et Améliorations Apportées**
 
 L'utilisation de black a permis les améliorations suivantes :
 

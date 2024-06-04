@@ -16,7 +16,7 @@
 </h2> 
 
 <p style="" align="left">
-Il semble que les commandes pyflakes ont été exécutées sans produire d'erreurs ni de sorties spécifiques dans la console. Voici une analyse de la sortie :
+Les commandes pyflakes ont été exécutées sans produire d'erreurs de sorties spécifiques dans la console. Voici notre analyse de la sortie :
 
 **Première commande :**
 
@@ -33,5 +33,5 @@ Cette commande exécute pyflakes sur le répertoire modules. Encore une fois, au
 
 **Conclusion**
 
-L'absence de sortie signifie que pyflakes n'a trouvé aucune erreur de syntaxe, d'importations inutilisées ou d'autres problèmes dans les fichiers analysés. C'est généralement une bonne nouvelle et indique que les fichiers sont conformes aux vérifications effectuées par pyflakes.
+L'absence de sortie signifie que pyflakes n'a trouvé aucune erreur de syntaxe, d'importations inutilisées ou d'autres problèmes dans les fichiers analysés. Ce qui indique que les fichiers sont conformes aux vérifications effectuées par pyflakes.
 </p>

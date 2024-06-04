@@ -15,28 +15,27 @@
 </h2> 
 
 <p style="" align="left">
-nalyse de la sortie du commande
+## Analyse de la sortie du commande
 
-Outil utilisé: Vulture
+Outil utilisé: `Vulture`
 
-Fichier analysé: main.py
+Fichier analysé: `main.py`
 
-Métriques mesurées:
+**Métriques mesurées:**
 
-    Nombre de méthodes inutilisées: Nombre de méthodes définies dans le fichier mais jamais appelées.
-    Nombre de classes inutilisées: Nombre de classes définies dans le fichier mais jamais instanciées.
-    Nombre d'attributs inutilisés: Nombre d'attributs définis dans le fichier mais jamais utilisés.
+- Nombre de méthodes inutilisées: Nombre de méthodes définies dans le fichier mais jamais appelées.
+- Nombre de classes inutilisées: Nombre de classes définies dans le fichier mais jamais instanciées.
+- Nombre d'attributs inutilisés: Nombre d'attributs définis dans le fichier mais jamais utilisés.
 
-Résultats:
+**Résultats:**
 
     Nombre de méthodes inutilisées: 15
     Nombre de classes inutilisées: 3
     Nombre d'attributs inutilisés: 4
 
-Interprétation des résultats:
+**Interprétation des résultats:**
 
 La sortie du commande Vulture indique que le fichier main.py contient un certain nombre de membres inutilisés. Cela signifie que ces membres sont définis dans le fichier mais qu'ils ne sont jamais utilisés par le code.
-
-Les membres inutilisés peuvent être un indicateur de code mal écrit ou de code qui n'est plus utilisé. Ils peuvent également rendre le code plus difficile à lire et à comprendre.
+ 
  
 </p>
