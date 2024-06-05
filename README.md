@@ -21,7 +21,7 @@ Notre projet est organisé de la manière suivante :
 
 Le dossier principal se compose de 3 sous-dossiers (```Documentations```, ```modules``` et ```tests```).
 
--Dans le dossier nommé ```Documentations```, nous avons le sous-dossier ```Captures images des  commandes``` où nous avons placé les captures d'écran des sorties des commandes, suivies des fichiers Markdown avec leurs analyses.
+-Dans le dossier nommé ```Documentations```, nous avons le sous-dossier ```Captures images des  commandes``` où nous avons placé les captures d'écran des sorties des commandes, suivies des rapports d'analyses sous format de fichier Markdown.
 
 -Dans le dossier nommé ```modules```, nous avons les classes principales ainsi que le sous-dossier ```strategy```, contenant les fichiers liés au ```design pattern Strategy```
 
